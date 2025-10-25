@@ -37,7 +37,7 @@ It allows users to create, read, update, and delete (CRUD) expense records, view
 
 ## 1️⃣ Clone the Repository
 ```bash
-git clone <your-repo-url>
+git clone <https://github.com/senthur1606/expense_tracker>
 cd expense_manager
 
 ### 2️⃣ Create and Activate Virtual Environment
