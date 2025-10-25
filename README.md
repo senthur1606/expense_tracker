@@ -41,7 +41,7 @@ git clone <https://github.com/senthur1606/expense_tracker>
 cd expense_manager
 
 ### 2️⃣ Create and Activate Virtual Environment
-```bash
+
 python -m venv myenv
 # Windows
 myenv\Scripts\activate
@@ -51,7 +51,7 @@ source myenv/bin/activate
 
 📦 3️⃣ Install Dependencies
 
-pip install django
+pip install django 
 
 🛠️ 4️⃣ Run Migrations
 
