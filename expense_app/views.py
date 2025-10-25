@@ -85,7 +85,7 @@ def expense_confirm_delete(request, pk):
     return render(request, 'expense_confirm_delete.html', {'expense': expense})
 
 
-#Export expenses as PDF
+#-----------Export expenses as PDF--------------
 
 
 def export_expenses_pdf(request):
