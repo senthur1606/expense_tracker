@@ -91,6 +91,14 @@ tr:nth-child(even) {
 tr:hover {
     background: #e1f0ff;
 }
+.no-data {
+    text-align: center;
+    font-weight: bold;
+    color: #555;
+    padding: 20px 0;
+    background-color: #f9f9f9;
+    font-size: 16px;
+}
 
 /* -------------------- Action Links Styled as Buttons -------------------- */
 .actions a {
@@ -175,6 +183,147 @@ form button[type="submit"] {
 }
 
 form button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Delete Confirmation Page */
+.delete-confirm-wrapper {
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center;
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.delete-confirm-wrapper h2 {
+    color: #dc3545;
+    margin-bottom: 15px;
+}
+
+.delete-confirm-wrapper p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.delete-confirm-wrapper form button,
+.delete-confirm-wrapper a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Delete Button */
+.delete-confirm-wrapper form button.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}
+
+.delete-confirm-wrapper form button.delete-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+/* Cancel Button */
+.delete-confirm-wrapper a.cancel-btn {
+    background-color: #6c757d;
+    color: white;
+}
+
+.delete-confirm-wrapper a.cancel-btn:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+/* -------------------- Summary Page Wrapper -------------------- */
+.summary-wrapper {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+.total-wrapper {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Use existing table-wrapper CSS for table styling */
+.table-wrapper {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #007bff;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.table-wrapper th, .table-wrapper td {
+    padding: 12px 15px;
+    border: 1px solid #007bff;
+    text-align: center;
+}
+
+.table-wrapper th {
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+}
+
+.table-wrapper tr:nth-child(even) {
+    background: #f1f5f9;
+}
+
+.table-wrapper tr:hover {
+    background: #e1f0ff;
+}
+
+/* pdf summary stylee */
+.summary-wrapper {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+.total-wrapper {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.export-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.export-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.export-btn:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
 }

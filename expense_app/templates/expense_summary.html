@@ -1,22 +1,37 @@
 {% extends 'base.html' %}
+
 {% block content %}
-<h2>Expense Summary by Category</h2>
-<table>
-    <thead>
-        <tr>
-            <th>Category</th>
-            <th>Total Amount</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for item in summary %}
-        <tr>
-            <td>{{ item.category }}</td>
-            <td>{{ item.total }}</td>
-        </tr>
-        {% empty %}
-        <tr><td colspan="2">No data available.</td></tr>
-        {% endfor %}
-    </tbody>
-</table>
+<div class="summary-wrapper">
+    <h2>Expense Summary</h2>
+
+    <div class="total-wrapper">
+        <strong>Total Expenses:</strong> {{ total_amount }}
+    </div>
+
+    <div class="export-buttons">
+        <a href="{% url 'export_expenses_excel' %}" class="export-btn">Export Excel</a>
+        <a href="{% url 'export_expenses_pdf' %}" class="export-btn">Export PDF</a>
+    </div>
+
+    {% if category_totals %}
+    <table class="table-wrapper">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Total Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in category_totals %}
+            <tr>
+                <td data-label="Category">{{ item.category }}</td>
+                <td data-label="Total Amount">{{ item.total }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p style="text-align:center; color:#555; font-weight:bold; padding:20px;">No expense data available.</p>
+    {% endif %}
+</div>
 {% endblock %}

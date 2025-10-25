@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Summary PDF</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h2 { text-align: center; color: #007bff; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #007bff; padding: 8px; text-align: center; }
+        th { background-color: #007bff; color: white; }
+        tr:nth-child(even) { background-color: #f1f5f9; }
+    </style>
+</head>
+<body>
+    <h2>Expense Summary</h2>
+    <p><strong>Total Expenses:</strong> {{ total_amount }}</p>
+    {% if category_totals %}
+    <table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Total Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in category_totals %}
+            <tr>
+                <td>{{ item.category }}</td>
+                <td>{{ item.total }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No expense data available.</p>
+    {% endif %}
+</body>
+</html>
+
+
