@@ -1,0 +1,180 @@
+/* -------------------- General Body -------------------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f8fa;
+    color: #333;
+}
+
+/* -------------------- Header -------------------- */
+header {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+header h1 {
+    font-size: 40px;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* -------------------- Navigation Buttons -------------------- */
+nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 12px 25px;
+    background: #ffffff80; /* semi-transparent white */
+    color: #007bff;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: #007bff;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* -------------------- Main Content -------------------- */
+main {
+    padding: 30px 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+/* -------------------- Table Styling -------------------- */
+table {
+    width: 95%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+}
+
+tr:nth-child(even) {
+    background: #f1f5f9;
+}
+
+tr:hover {
+    background: #e1f0ff;
+}
+
+/* -------------------- Action Links Styled as Buttons -------------------- */
+.actions a {
+    display: inline-block;
+    padding: 6px 14px;
+    margin-right: 5px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+/* Edit link */
+.actions .edit-btn {
+    background-color: #28a745; /* green */
+}
+
+.actions .edit-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Delete link */
+.actions .delete-btn {
+    background-color: #dc3545; /* red */
+}
+
+.actions .delete-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+/* -------------------- Responsive Table -------------------- */
+@media screen and (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th {
+        display: none; /* hide table header on mobile */
+    }
+
+    td {
+        padding: 10px;
+        margin-bottom: 10px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+        color: #007bff;
+    }
+
+    .actions a {
+        margin-bottom: 5px;
+    }
+}
+
+/* -------------------- Save Button Styling -------------------- */
+form button[type="submit"] {
+    display: block;
+    width: 150px;
+    margin: 20px auto 0 auto;
+    padding: 12px 0;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
