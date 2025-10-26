@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404,HttpResponse
-from .models import Expense
+from expense_app.models import Expense
 from django.db.models import Sum
 from django.template.loader import get_template
 from xhtml2pdf import pisa
@@ -24,9 +24,9 @@ def expense_create(request):
             notes=request.POST.get('notes'),
             created_by=request.POST.get('created_by')
         )
-        return redirect('expense_list')  # ✅ redirect after save
+        return redirect('expense_list')  #  redirect after save
 
-    return render(request, 'expense_form.html')  # ✅ render form page
+    return render(request, 'expense_form.html')  #  render form page
 
 
 # Update expense
