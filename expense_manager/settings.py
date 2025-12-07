@@ -19,7 +19,6 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "default_secret")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DJANGO_DEBUG", "True") == "True"
 
-# ⬇️ IMPORTANT for Vercel (you can later replace "*" with your exact domain)
 ALLOWED_HOSTS = ["*"]
 
 
@@ -37,7 +36,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # ⬅️ moved near top
+    'whitenoise.middleware.WhiteNoiseMiddleware',  
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -98,7 +97,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'        # optional: 'Asia/Kolkata' if you want
+TIME_ZONE = 'UTC'        
 
 USE_I18N = True
 
