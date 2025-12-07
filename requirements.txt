@@ -3,3 +3,7 @@ openpyxl>=3.1.2
 xhtml2pdf>=0.2.8
 pytz
 sqlparse
+asgiref
+whitenoise
+gunicorn
+
